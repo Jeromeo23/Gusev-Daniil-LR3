@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D41C9E98-8D74-4E35-B9F0-152036577C25}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RolesUsers</RootNamespace>
+    <AssemblyName>RolesUsers</AssemblyName>
+    <StartupObject>RolesUsers.Program</StartupObject>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath><DebugType>pdbonly</DebugType><Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Data" /><Reference Include="System.Data.Entity" /><Reference Include="System.ComponentModel.DataAnnotations" /><Reference Include="System.Drawing" /><Reference Include="System.Windows.Forms" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"><HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath></Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"><HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" /><Compile Include="Forms\FormAutorization.cs" /><Compile Include="Forms\FormParent.cs" /><Compile Include="Forms\FormManager.cs" /><Compile Include="Forms\FormSeller.cs" /><Compile Include="Forms\FormDirector.cs" />
+    <Compile Include="ADO_NET\Model1.cs" /><Compile Include="ADO_NET\Users.cs" /><Compile Include="ADO_NET\Roles.cs" />
+    <None Include="App.config" /><None Include="packages.config" />
+    <Content Include="Photo\1.png"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content><Content Include="Photo\2.png"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content><Content Include="Photo\3.png"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content><Content Include="Photo\4.png"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content><Content Include="Photo\5.png"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
